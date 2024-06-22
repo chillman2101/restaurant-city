@@ -1,10 +1,12 @@
 import express from "express";
 import AuthController from "../controllers/AuthController.js"
+import jwtAuth from "../middlewares/jwtAuth.js";
 
 
 const router = express.Router()
 
 router.post('/register', AuthController.register)
-router.get('/fetch', AuthController.fetch)
+router.post('/login', AuthController.login)
+router.post('/refresh-token', AuthController.refreshToken)
 
  export default router

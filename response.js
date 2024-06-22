@@ -1,5 +1,4 @@
-function responseSuccess(response, total_data) {
-    const message = "Response berhasil diterima";
+function responseSuccess(response,message, total_data) {    
     const data = response; 
 
     return {
@@ -10,7 +9,7 @@ function responseSuccess(response, total_data) {
     };
 }
 function responseFailed(error) {
-    const message = `Terjadi Kesalahan : ${error}`;
+    const message = error
 
     return {
         status:false,
